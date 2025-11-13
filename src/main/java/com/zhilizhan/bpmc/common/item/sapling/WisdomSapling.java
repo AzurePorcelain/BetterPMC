@@ -26,7 +26,7 @@ public class WisdomSapling extends XpSapling {
             PlayerEntity player = (PlayerEntity) livingEntity;
             if(!level.isClientSide) {
                 player.getCapability(CapabilityHandler.PLAYER_DATA_CAPABILITY).ifPresent((l) -> {
-                    int amount = 1000;
+                    int amount = 10000;
                     l.getPlayerData().addResource(Resources.TREE_XP, amount);
                     PlayerUtil.playClientSound(player, SoundEvents.EXPERIENCE_BOTTLE_THROW);
                     stack.shrink(1);
