@@ -65,7 +65,7 @@ public class GrassCarpEntity extends PVZPlantEntity {
         EntityUtil.getFriendlyLivings(this, EntityUtil.getEntityAABB(this, range, 2.5F)).forEach((entity) -> {
 
             if (entity.getHealth()<entity.getMaxHealth()) {
-                entity.heal(Math.min(Math.max(4f,entity.getMaxHealth()/5),20));
+                entity.heal(Math.min(Math.max(4f,entity.getMaxHealth()/10),100));
             }
 
         });
